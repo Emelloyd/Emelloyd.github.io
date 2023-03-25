@@ -411,6 +411,7 @@
 /* contact */
 #contact{
     margin-top: 100px;
+    background-image: ();
 }
 #contact h1{
     text-align: center;
@@ -471,7 +472,6 @@
     color: white;
 }
 .icons i{
-    background-color: white;
     color: #f30f79;
     border-radius: 50px;
     padding: 6px;
