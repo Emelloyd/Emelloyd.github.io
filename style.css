@@ -480,7 +480,7 @@
     cursor: pointer;
 }
 .icons i:hover{
-    background-color: rgba(161,109,14,1);
+    background-color: rgb(126, 0, 52);
     color: white;
 }
 .copyright{
