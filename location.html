@@ -4,211 +4,136 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sean's Location</title>
-    <style>
-::-webkit-input-placeholder {
-  color: #FFF;
-}
-::-moz-placeholder {
-  color: #FFF;
-}
-:-ms-input-placeholder { 
-  color: #FFF;
-}
-
-body {
-  background: #FFF;
-  color: #6C7A89;
-  display: flex;
-  flex-direction: column;
-  font: 100 14px/1.5 sans-serif;
-  min-height: 100vh;
-  overflow-x: hidden;
-  position: relative
-}
-
-header {
-  background: #426AFB;
-  color: #FFF;
-  flex-shrink: 0;
-  padding-bottom: 10px;
-}
-
-label {
-  font-size: 80%;
-  font-weight: 700;
-  text-transform: uppercase
-}
-
-input,
-select {
-  background: #426AFB;
-  border: 2px solid #FFF;
-  color: #FFF;
-  height: 40px;
-  padding: 0 5px;
-  width: 100%;
-  transition: all .3s ease-in-out;
-}
-
-input:focus,
-select:focus {
-  background: #FFF;
-  color: #6C7A89;
-  outline: none
-}
-
-option {
-  padding: 10px
-}
-
-select:-moz-focusring {
-  color: transparent;
-  text-shadow: 0 0 0 #000;
-}
-
-[type=submit] {
-  background: #426AFB;
-  border: 2px solid #FFF;
-  color: #FFF;
-  font-size: 90%;
-  font-weight: 600;
-  height: 40px;
-  margin-bottom: 15px;
-  padding: 0 15px;
-  transition: all .3s ease-in-out;
-  text-transform: uppercase
-}
-
-[type=submit]:hover,
-[type=submit]:focus {
-  background: #FFF;
-  color: #426AFB
-}
-
-ol {
-  list-style: none;
-  margin: 0
-}
-
-li {
-  border-left: 2px solid #426AFB;
-  counter-increment: item;
-  padding: 10px 0 10px 35px;
-  position: relative;
-}
-
-li:before {
-  color: #426AFB;
-  content: counter(item);
-  display: block;
-  font-weight: 700;
-  left: 0;
-  line-height: 30px;
-  position: absolute;
-  width: 30px;
-  text-align: center;
-  transform: translateY(-50%);
-  top: 50%;
-}
-
-[href^="mailto:"] {
-  color: #6C7A89;
-  text-decoration: none;
-}
-
-[href^="mailto:"]:hover,
-[href^="mailto:"]:focus {
-  color: #426AFB;
-  outline: none;
-}
-
-h4 {
-  margin: 0 0 5px 0;
-}
-
-p {
-  margin: 0;
-}
-
-#map {
-  flex-grow: 1;
-  min-height: 300px;
-  width: 100%;
-  transition: all .3s ease-in-out;
-}
-
-#map.active {
-  width: 50vw
-}
-
-main {
-  bottom: 0;
-  display: block;
-  height: calc(100vh - 150px);
-  min-height: 300px;
-  overflow-y: auto;
-  padding: 0 15px;
-  position: absolute;
-  right: -50vw;
-  width: 50vw;
-  transition: all .3s ease-in-out;
-}
-
-main.active {
-  right: 0;
-}
-
-@media only screen and (max-width: 768px) {
-  header {
-    height: 50vh;
-    padding-bottom: 40px;
-  }
-  [type=submit] {
-    margin: 15px;
-  }
-  #map,
-  #map.active {
-    height: 50vh;
-    width: 100%
-  }
-  main {
-    height: 0;
-    overflow: hidden;
-    position: relative;
-    right: 0;
-    width: 100%;
-  }
-  main.active {
-    height: auto
-  }
-}
-    </style>
-
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./Assets/css/bootstrap.min.css">
+    <title>Sean's Cake and Pastries Location</title>
+    <script src="./Assets/js/bootstrap.bundle.min.js"></script>
+   
 </head>
 <body>
-<header role="banner" class="column-xs main-xs-center">
-    <form id="locator" class="container column-xs row-md cross-xs-stretch cross-md-end" action="">
-      <div class="col">
-        <label for="locator_text">Type an address</label>
-        <input type="text" id="locator_text" name="locator_text" required>
-      </div>
-      <div class="col-xs-two-thirds col-md-quarter">
-        <label for="locator_radius">Within</label>
-        <select id="locator_radius" name="locator_radius">
-              <option value='10'>10 mi</option>
-              <option value='25'>25 mi</option>
-              <option value='50'>50 mi</option>
-              <option value='100'>100 mi</option>
-            </select>
-      </div>
-      <button type="submit">Search</button>
-    </form>
-    <div class="map-location">
-      <img src="./Assets/logoBG/Seans Location.png" alt="map-location">
+  <div class="main-content">      
+    <nav class="navbar navbar-expand-md" id="navbar-color">
+        <div class="container">
+            <!-- logo -->
+            <div class="navbar-brand">
+            <img src="Assets/logoBG/logo.png" class="rounded" alt="" width="80px">
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          
+          <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+                <div id="home">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html" alt="Homepage">Home</a>
+                    </li>
+                </div>
+
+                <div id="store-locator">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./location.html">Store Location</a>
+                    </li>
+                </div>
+
+                <div id="contact-us">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact US</a>
+                    </li>
+                </div>
+  
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    FAQs
+                </button>
+                 </ul>
+            </div>
+            <div class="icons">
+            <button class="btn" href="#" title="Add To Cart"><img src="Assets/Icons/add.png" alt="Add Cart" width="20px"></button>
+            <button class="btn"><a href="login.html"><img src="Assets/Icons/user.png" alt="User Icon" width="20px"></a></button>          
+            </div>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn" type="submit"><img src="Assets/Icons/bx-search.svg" alt=""></button>
+          </form>
+        </div>
+        </nav>
+        <div class="store-location">
+          <img src="./Assets/logoBG/Seans Location.png" alt="location">
+          <!-- contact  -->
+          <div class="container" id="contact" data-aos="fade-up"
+          data-aos-duration="1500">
+          <h1>CONTACT US</h1>
+          <div class="row">
+              <div class="col-md-4 py-1 py-md-0">
+                  <div class="form-group">
+                      <input type="text" class="form-control" id="usr" placeholder="Name">
+                  </div>
+              </div>
+              <div class="col-md-4 py-1 py-md-0">
+                  <div class="form-group">
+                      <input type="email" class="form-control" id="eml" placeholder="Email">
+                  </div>
+              </div>
+              <div class="col-md-4 py-1 py-md-0">
+                  <div class="form-group">
+                      <input type="number" class="form-control" id="phn" placeholder="Phone">
+                  </div>
+              </div>
+              
+          </div>
+          <div class="form-group">
+              <textarea class="form-control" rows="5" id="comment" placeholder="Message"></textarea>
+          </div>
+          <div id="messagebtn"><button>Send Message</button></div>
+          </div>
+          <!-- contact end -->
+          <footer id="footer">
+            <h1 class="text-center">Sean's Cake & Pastries</h1>
+            <p class="text-center">Fresh, Delicious, Sweet, Tasty Cakes in Town</p>
+            <div class="icons text-center">
+         
+              <a href="https://www.facebook.com/BatangDumagoc" id="facebook"><i><img src="Assets/Icons/fb.png" width="20px" alt="facebook"></i></a>
+              <a href="https://github.com/Emelloyd" id="github"><i><img src="Assets/Icons/github.png" width="20px" alt="github"></i></a>
+              <a href="https://www.youtube.com/channel/UCTmVUKW4oRuHhe4P8n5ug7g" id="youtube"><i><img src="./Assets/Icons/Youtube-logo-png.png" width="50px" alt="youtube"></i></a>
+       
+            </div>
+            <div class="copyright text-center">
+                &copy; Copyright <strong>Sean's Cake & Pastries</strong> .All Rights Reserved
+            </div>
+            <div class="credits text-center">
+                Designed By <a href="./index.html"><span>Emelloyd Rodriguez</span></a>
+            </div>
+          </footer>
+        </div>
+      
+         <!-- Modal -->
+   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="false">
+    <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+        <h1 class="modal-title fs-5" id="faqs">Frequently Asked Questions</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+                <h4>Why order with Sean's Cake & Pastries?</h4>
+                <p>
+                    Our network of talented bakers is selected to ensure each cake is hand-made freshly, from scratch, to order.
+                    This is why our cakes are still moist and delicious by the time they are delivered to your door.
+                </p>
+                <p>
+                    Further, we can deliver 7 days a week and only need 24-hours notice on most products.
+                </p>
+                <p>
+                    We accommodate most dietary requirements and our friendly customer service team is always on-hand to help!
+                </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
     </div>
-  </header>
-  <aside id="map"></aside>
-  <main id="results"></main>
+  </div>
 </body>
 </html>
