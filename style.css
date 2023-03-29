@@ -272,6 +272,7 @@
     color: #b20338;
     text-shadow: 1px 1px 1px black;
     border-bottom: 2px solid #8bcae1;
+    padding-bottom: 50px;
 }
 #product-cards .card{
     background-color: #8bcae1;
@@ -473,7 +474,7 @@
 }
 #footer h1{
     color: white;
-    padding-top: 30px;
+    padding-top: 10px;
 }
 #footer p{
     color: white;
@@ -517,6 +518,9 @@ html{
     background-color: #f30f79;
     color: white;
 }
-#store-location{
-    margin: 0 auto;
+.logo{
+        display: flex;
+        justify-content: center;
+        padding: 15px;
+        width: 0 auto;
 }
