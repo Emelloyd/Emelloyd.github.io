@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="Assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./Assets/css/bootstrap.min.css">
     <title>Sean's Cake and Pastries</title>
-    <script src="Assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./Assets/js/bootstrap.bundle.min.js"></script>
 
 <style>
  body{
@@ -88,15 +88,15 @@ a:hover{
                       <div class="col-md-5 mx-auto">
                           <div class="card card-body">
                                                       
-                              <form id="submitForm" action="signup" method="get" data-parsley-validate="" data-parsley-errors-messages-disabled="true" novalidate="" _lpchecked="1"><input type="hidden">
+                              <form id="submitForm" action="signup" method="post" data-parsley-validate="" data-parsley-errors-messages-disabled="true" novalidate="" _lpchecked="1"><input type="hidden">
                                   <div class="form-group required">
                                       <label for="username">Firstname</label>
-                                      <input type="text" class="form-control text-info" id="firstName" required="" name="firstName" value="">
+                                      <input type="text" class="form-control" id="firstName" required="">
                                   </div>
                                   <form id="submitForm" action="signup" method="post" data-parsley-validate="" data-parsley-errors-messages-disabled="true" novalidate="" _lpchecked="1"><input type="hidden">
                                     <div class="form-group required">
                                         <label for="username">Lastname</label>
-                                        <input type="text" class="form-control text-info" id="lastName"  name="lastName" value="">
+                                        <input type="text" class="form-control" id="lastName"  required="">
                                     </div>
                                     <form id="submitForm" action="mobile" method="post" data-parsley-validate="" data-parsley-errors-messages-disabled="true" novalidate="" _lpchecked="1"><input type="hidden">
                                         <div class="form-group required">
@@ -105,7 +105,7 @@ a:hover{
                                         </div>     
                                         <div class="form-group required">
                                             <label for="username">Email Address</label>
-                                            <input type="text" class="form-control" id="username" required="" name="username" value="">
+                                            <input type="email" class="form-control" id="username" required="" name="username" value="">
                                         </div>                 
                                   <div class="form-group required">
                                       <label class="d-flex flex-row align-items-center" for="password">Password</label>
