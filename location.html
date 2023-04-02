@@ -6,17 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./Assets/css/bootstrap.min.css">
-    <title>Sean's Cake and Pastries Location</title>
+    <title>Sean's Cake and Pastries</title>
+    <link rel="Seanslogo" href="Assets/logoBG/logo.png">
     <script src="./Assets/js/bootstrap.bundle.min.js"></script>
-   
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0-beta1/css/bootstrap.min.css" />
+
 </head>
 <body>
   <div class="main-content">      
-    <nav class="navbar navbar-expand-md" id="navbar-color">
+    <nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary postion-fixed w-100" id="navbar-color">
         <div class="container">
             <!-- logo -->
             <div class="navbar-brand">
-            <img src="Assets/logoBG/logo.png" class="rounded" alt="" width="80px">
+            <img src="Assets/logoBG/logo.png" class="rounded" alt="Seans Logo" width="60px">
         </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -26,6 +29,19 @@
           <!-- Navbar links -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto">
+                <div class="nav-item dropdown">
+                    <a class="btn dropdown-toggle"  href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                     Menu
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#all-cakes">All Cakes</a></li>
+                      <li><a class="dropdown-item" href="#best-seller">Best Seller</a></li>
+                      <li><a class="dropdown-item" href="#birthday-cakes">Birthday Cakes</a></li>
+                      <li><a class="dropdown-item" href="#christening-cakes">Christening Cakes</a></li>
+                      <li><a class="dropdown-item" href="#wedding-cakes">Wedding Cakes</a></li>
+                </ul>
+                  </div>
+        
                 <div id="home">
                     <li class="nav-item">
                         <a class="nav-link" href="./index.html" alt="Homepage">Home</a>
@@ -49,9 +65,10 @@
                 </button>
                  </ul>
             </div>
+        
             <div class="icons">
             <button class="btn" href="#" title="Add To Cart"><img src="Assets/Icons/add.png" alt="Add Cart" width="20px"></button>
-            <button class="btn"><a href="login.html"><img src="Assets/Icons/user.png" alt="User Icon" width="20px"></a></button>          
+            <button class="btn"><a href="login.html" title="Login/Register"><img src="Assets/Icons/user.png" alt="User Icon" width="20px"></a></button>          
             </div>
           <form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -61,7 +78,7 @@
         </nav>
         <div class="row" id="location">
           <img src="./Assets/logoBG/Seans Location.png" alt="location">
-          <!-- contact  -->
+            <!-- contact  -->
           <div class="container" id="contact" data-aos="fade-up"
           data-aos-duration="1500">
           <h1>CONTACT US</h1>
