@@ -76,37 +76,34 @@
           </form>
         </div>
         </nav>
-        <div class="row" id="location">
-          <img src="./Assets/logoBG/Seans Location.png" alt="location">
+        <div class="row mt-4">
+            <div class="col-lg-6">
+                <!-- to edit google map goto https://www.embed-map.com type your location, generate html code and copy the html  -->
+                    <div style="max-width:100%;overflow:hidden;color:red;width:500px;height:500px;">
+                    <div id="google-maps-canvas" style="height:100%; width:100%;max-width:100%;">
+                    <iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Sean's+Cake+and+Pastries,+Santiago+Dist,+Pagadian+City,+Zamboanga+del+Sur,+Philippines&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8">
+                    </iframe></div><a class="googlemaps-made" href="https://www.bootstrapskins.com/themes" id="make-map-data">premium bootstrap themes</a>
+                    
+                    <style>#google-maps-canvas .text-marker{}.map-generator{max-width: 100%; max-height: 100%; background: none;
+                    </style>
+                    </div>
+            </div>
+
+            <div class="col-lg-6">
+                <!-- form fields -->
+                <form>
+                    <input type="text" class="form-control form-control-lg" placeholder="Name">
+                    <input type="email" class="form-control mt-3" placeholder="Email">
+                    <input type="text" class="form-control mt-3" placeholder="Subject">
+                    <div class="mb-3 mt-3">
+                        <textarea class="form-control" rows="5" id="comment" name="text" placeholder="Message Me"></textarea>
+                    </div>
+                </form>
+                <button type="button" class="btn btn-success mt-3">Contact Me</button>
+                
+            </div>
+
         </div>
-              <!-- contact  -->
-        <div class="container" id="contact">
-          <h1>CONTACT US</h1>
-          <div class="row">
-              <div class="col-md-4 py-1 py-md-0">
-                  <div class="form-group">
-                      <input type="text" class="form-control" id="usr" placeholder="Name">
-                  </div>
-              </div>
-              <div class="col-md-4 py-1 py-md-0">
-                  <div class="form-group">
-                      <input type="email" class="form-control" id="eml" placeholder="Email">
-                  </div>
-              </div>
-              <div class="col-md-4 py-1 py-md-0">
-                  <div class="form-group">
-                      <input type="number" class="form-control" id="phn" placeholder="Phone">
-                  </div>
-              </div>
-              
-          </div>
-          <div class="form-group">
-              <textarea class="form-control" rows="5" id="comment" placeholder="Message"></textarea>
-          </div>
-          <div id="messagebtn"><button>Send Message</button></div>
-        </div>
-      </div>
-          <!-- contact end -->
           <footer id="footer">
             <h1 class="text-center">Sean's Cake & Pastries</h1>
             <p class="text-center">Fresh, Delicious, Sweet, Tasty Cakes in Town</p>
